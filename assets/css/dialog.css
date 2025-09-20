@@ -189,6 +189,10 @@
     color: white;
 }
 
+.image-caption {
+    margin-left: 55px;
+}
+
 .auth-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);

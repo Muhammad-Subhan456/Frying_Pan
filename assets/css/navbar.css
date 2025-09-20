@@ -5,7 +5,7 @@ nav {
     justify-content: space-between; /* logo left, links center, button right */
     align-items: center;
     padding: 15px 40px;
-    background: linear-gradient(90deg, #b292f1 0%, #8f31e7 100%);
+    background: linear-gradient(90deg, #F5DF58 0%, #a771da 100%);
     border-radius: 30px;
     margin-top: 15px;
     flex-wrap: nowrap; /* prevent items stacking */
@@ -45,7 +45,7 @@ nav {
 }
 
 .nav-links li a:hover {
-    color: #ffd166;
+    color: #1d1d1c;
     transform: scale(1.1); /* pop-out */
 }
 

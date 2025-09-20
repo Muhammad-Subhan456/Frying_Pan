@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/navbar.css" >
     <link rel="stylesheet" href="assets/css/dialog.css" >
+    <link rel="stylesheet" href="assets/css/contact.css" >
 </head>
 <body>
      <!-- NavBar Starts -->
@@ -146,6 +147,41 @@
 
 
     <!-- main  -->
+     <main>
+        <h2 class="contact">Contact Us</h2>
+
+    <form class="contact-form">
+        <div>
+          <label for="name">Name:</label>
+          <input id="name" name="name" type="text" placeholder="Enter your name">
+
+          <label for="email">Email:</label>
+          <input id="email" name="email" type="email" placeholder="Enter your email">
+
+          
+          <label for="refferel">How did you hear About Us:</label> 
+            <select id="referral" name="referral">
+                <option value="" disabled selected>-- Select an option --</option>
+                <option value="friend">Friend or Family</option>
+                <option value="social">Social Media</option>
+                <option value="ads">Online Ads</option>
+                <option value="search">Search Engine (Google, Bing, etc.)</option>
+                <option value="event">Event or Conference</option>
+                <option value="other">Other</option>
+            </select>
+          
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" placeholder="Write your message"></textarea>
+        </div>
+
+        <button type="submit">Send</button>
+        <button type="reset">Reset</button>
+    
+    </form>
+
+
+     </main>
      
 
     <!-- Footer  -->
