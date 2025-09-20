@@ -9,6 +9,7 @@ nav {
     border-radius: 30px;
     margin-top: 15px;
     flex-wrap: nowrap; 
+    position: relative;
 }
 
 .logo img {
@@ -70,7 +71,8 @@ nav {
     border: none;
     cursor: pointer;
     padding: 8px;
-    margin-left: auto;
+    margin-left: 15px;
+    z-index: 1001;
 }
 
 .mobile-toggle span {
@@ -82,7 +84,20 @@ nav {
     border-radius: 2px;
 }
 
-/* Responsive Styles */
+/* Responsive Breakpoints */
+
+/* Large Desktop */
+@media screen and (max-width: 1200px) {
+    nav {
+        padding: 12px 30px;
+    }
+    
+    .nav-links {
+        margin: 0 25px;
+    }
+}
+
+/* Desktop/Laptop */
 @media screen and (max-width: 1024px) {
     nav {
         padding: 12px 25px;
@@ -102,11 +117,15 @@ nav {
     }
 }
 
+/* Tablet and Mobile */
 @media screen and (max-width: 768px) {
     nav {
+        margin-left: 10px;
+        margin-right: 20px;
         padding: 10px 20px;
-        position: relative;
-        flex-wrap: wrap;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: row;
     }
     
     .logo img {
@@ -120,12 +139,13 @@ nav {
         left: 0;
         right: 0;
         background: linear-gradient(90deg, #F5DF58 0%, #a771da 100%);
-        border-radius: 0 0 20px 20px;
+        border-radius: 20px;
         flex-direction: column;
-        margin: 0;
+        margin-top: 20px;
         padding: 20px 0;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         z-index: 1000;
+        animation: slideDown 0.3s ease-in-out;
     }
     
     .nav-links.active {
@@ -133,31 +153,39 @@ nav {
     }
     
     .nav-links li {
-        margin: 10px 0;
+        margin: 8px 0;
+        width: 100%;
     }
     
     .nav-links li a {
         font-size: 16px;
-        padding: 10px 20px;
+        padding: 12px 20px;
         display: block;
         text-align: center;
+        width: 100%;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+    
+    .nav-links li a:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateY(-2px);
     }
     
     .btn {
-        order: 2;
         padding: 8px 15px;
         font-size: 13px;
-        margin-right: 15px;
+        white-space: nowrap;
     }
     
     .mobile-toggle {
         display: flex;
-        order: 3;
     }
     
     /* Hamburger animation */
     .mobile-toggle.active span:nth-child(1) {
         transform: rotate(-45deg) translate(-5px, 6px);
+        background-color: #d62828;
     }
     
     .mobile-toggle.active span:nth-child(2) {
@@ -166,12 +194,36 @@ nav {
     
     .mobile-toggle.active span:nth-child(3) {
         transform: rotate(45deg) translate(-5px, -6px);
+        background-color: #d62828;
     }
 }
 
-@media screen and (max-width: 480px) {
+/* Small Tablet */
+@media screen and (max-width: 640px) {
     nav {
         padding: 8px 15px;
+        border-radius: 25px;
+    }
+    
+    .logo img {
+        height: 45px;
+    }
+    
+    .btn {
+        padding: 7px 12px;
+        font-size: 12px;
+    }
+    
+    .nav-links li a {
+        font-size: 15px;
+        padding: 10px 15px;
+    }
+}
+
+/* Mobile Phone */
+@media screen and (max-width: 480px) {
+    nav {
+        padding: 8px 12px;
         margin-top: 10px;
         border-radius: 20px;
     }
@@ -181,9 +233,8 @@ nav {
     }
     
     .btn {
-        padding: 6px 12px;
-        font-size: 12px;
-        margin-right: 10px;
+        padding: 6px 10px;
+        font-size: 11px;
     }
     
     .nav-links li a {
@@ -191,8 +242,76 @@ nav {
         padding: 8px 15px;
     }
     
+    .mobile-toggle {
+        padding: 5px;
+        margin-left: 8px;
+    }
+    
     .mobile-toggle span {
         width: 20px;
         height: 2px;
+    }
+}
+
+/* Very Small Mobile */
+@media screen and (max-width: 360px) {
+    nav {
+        padding: 6px 10px;
+        border-radius: 15px;
+    }
+    
+    .logo img {
+        height: 35px;
+    }
+    
+    .btn {
+        padding: 5px 8px;
+        font-size: 10px;
+    }
+    
+    .mobile-toggle {
+        padding: 4px;
+        margin-left: 5px;
+    }
+    
+    .mobile-toggle span {
+        width: 18px;
+        height: 1.5px;
+    }
+}
+
+/* Animations */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Staggered menu item animation */
+@media screen and (max-width: 768px) {
+    .nav-links.active li {
+        animation: fadeInUp 0.3s ease-in-out forwards;
+        opacity: 0;
+    }
+    
+    .nav-links.active li:nth-child(1) { animation-delay: 0.1s; }
+    .nav-links.active li:nth-child(2) { animation-delay: 0.2s; }
+    .nav-links.active li:nth-child(3) { animation-delay: 0.3s; }
+    .nav-links.active li:nth-child(4) { animation-delay: 0.4s; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

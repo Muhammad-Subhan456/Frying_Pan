@@ -13,28 +13,73 @@
     <!-- NavBar Starts -->
      <div>
     <nav>
-      <div class="logo">
-        <a href="index.html">
-          <img src="assets/images/logo.png" alt="FryingPan Logo" />
-        </a>
-      </div>
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/images/logo.png" alt="FryingPan Logo" />
+            </a>
+        </div>
 
-      <ul class="nav-links">
-        <strong>
-          <li><a href="#">Games</a></li>
-        </strong>
-        <strong>
-          <li><a href="contact.html">Contact us</a></li>
-        </strong>
-        <strong>
-          <li><a href="about.html">About us</a></li>
-        </strong>
-        <strong>
-          <li><a href="#">Scan QR</a></li>
-        </strong>
-      </ul>
-      <a href="#" class="btn" id="openDialog">Sign in / Register</a>
+        <ul class="nav-links" id="navLinks">
+            <strong>
+                <li><a href="#">Games</a></li>
+            </strong>
+            <strong>
+                <li><a href="contact.html">Contact us</a></li>
+            </strong>
+            <strong>
+                <li><a href="about.html">About us</a></li>
+            </strong>
+            <strong>
+                <li><a href="#">Scan QR</a></li>
+            </strong>
+        </ul>
+        
+        <a href="#" class="btn" id="openDialog">Sign in / Register</a>
+        
+        <!-- Mobile hamburger menu -->
+        <button class="mobile-toggle" id="mobileToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
+
+    <script>
+        // Mobile menu toggle functionality
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+        const nav = document.querySelector('nav');
+
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileToggle.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on nav links
+        navLinks.addEventListener('click', (e) => {
+            if (e.target.tagName === 'A') {
+                navLinks.classList.remove('active');
+                mobileToggle.classList.remove('active');
+            }
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!nav.contains(e.target)) {
+                navLinks.classList.remove('active');
+                mobileToggle.classList.remove('active');
+            }
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                navLinks.classList.remove('active');
+                mobileToggle.classList.remove('active');
+            }
+        });
+    </script>
+    
 
     <!-- Sign In / Register Dialog -->
 
