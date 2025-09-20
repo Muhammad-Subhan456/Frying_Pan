@@ -62,7 +62,6 @@ h1 {
     max-width: 40%;
     max-height: 600px;
     object-fit:fill;
-    /* keeps ratio */
     transition: transform 0.8s ease-in-out;
 }
 .slide:hover .main-img {
@@ -72,14 +71,10 @@ h1 {
 .qr-container {
     display: flex;
     justify-content: center;
-    /* center horizontally */
     align-items: center;
-    /* align vertically */
     gap: 40px;
-    /* space between text and QR */
     margin: 50px auto;
     flex-wrap: wrap;
-    /* makes it responsive */
     text-align: left;
 }
 .multiplayer {
@@ -112,11 +107,9 @@ h1 {
     justify-content: center;
     align-items: center;
     gap: 40px;
-    /* space between image and text */
     margin: 60px auto;
     max-width: 1000px;
     flex-wrap: wrap;
-    /* ensures wrapping on smaller screens */
     text-align: left;
 }
 
@@ -124,10 +117,8 @@ h1 {
     width: 500px;
     max-height: 1000px;
     transform: scale(1.2);
-    /* lighter zoom */
 }
 
-/* text section */
 .play-text {
     max-width: 400px;
     color: white;
@@ -145,14 +136,12 @@ h1 {
 
 .games-title {
     font-size: clamp(1.5rem, 4vw, 2.5rem);
-    /* responsive size */
     margin: 40px 0 20px;
     font-weight: bold;
     text-align: center;
     color: wheat;
 }
 
-/* Grid layout adapts automatically */
 .games-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -169,18 +158,15 @@ h1 {
     display: flex;
     flex-direction: column;
     height: 300px;
-    /* total card height */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* image always takes 60% */
 .card img {
     width: 100%;
     height: 60%;
     object-fit: cover;
 }
 
-/* text always takes 40% */
 .card-text {
     height: 40%;
     display: flex;
@@ -189,19 +175,16 @@ h1 {
     padding: 10px;
     font-weight: bold;
     font-size: clamp(0.9rem, 2.5vw, 1rem);
-    /* responsive text */
     color: #333;
     background: #fff;
     text-align: center;
 }
 
-/* hover for desktop */
 .card:hover {
     transform: scale(1.08);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Accessibility: focus styles for keyboard navigation */
 .card:focus-within {
     outline: 3px solid #ff9800;
     outline-offset: 4px;
@@ -209,16 +192,16 @@ h1 {
   
 .ccard {
     display: flex;
-    justify-content: center; /* center horizontally */
-    align-items: center;    /* center vertically */
-    min-height: 20vh;      /* take full screen height */
+    justify-content: center; 
+    align-items: center;   
+    min-height: 20vh;      
     margin-bottom: 40px;
 }
 
 .ccard video {
     max-width: 100%;
-    border-radius: 12px;   /* optional rounded corners */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* subtle shadow */
+    border-radius: 12px;   
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
 }
 
 
@@ -257,7 +240,6 @@ tr:hover {
 }
 
 
-/* fade animation */
 @keyframes fade {
 
     0%,
@@ -275,7 +257,6 @@ tr:hover {
         opacity: 0;
     }
 }
-/* Responsive */
 @media (max-width: 992px) {
     .hero-wrapper {
         flex-direction: column;
@@ -289,20 +270,16 @@ tr:hover {
 
     .hero-image img {
         width: 400px;
-        /* smaller on tablets */
     }
 }
 @media (max-width: 576px) {
     .hero-image img {
         width: 280px;
-        /* mobile size */
     }
 }
-/* Mobile adjustments */
 @media (max-width: 600px) {
     .games-grid {
         grid-template-columns: 1fr;
-        /* one column on small screens */
     }
     .games-title {
         margin: 20px 0 10px;
@@ -323,22 +300,17 @@ tr:hover {
         content: " (" attr(href) ")";
     }
 }
-/* 📱 Mobile responsive adjustments */
 @media (max-width: 768px) {
     .play-section {
         flex-direction: column;
-        /* stack image on top of text */
         text-align: center;
-        /* center align text for mobile */
         gap: 20px;
     }
 
     .play-image img {
         width: 90%;
-        /* shrink image */
         max-height: auto;
         transform: scale(1);
-        /* remove zoom on mobile */
     }
 
     .play-text {
@@ -353,23 +325,19 @@ tr:hover {
         font-size: 1rem;
     }
 }
-/* 📱 Responsive navbar */
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
-        /* stack logo, links, button vertically */
         padding: 10px 20px;
         border-radius: 15px;
     }
 
     .logo img {
         height: 35px;
-        /* smaller logo */
     }
 
     .nav-links {
         flex-direction: column;
-        /* stack links */
         gap: 15px;
         margin: 15px 0;
         align-items: center;
@@ -377,17 +345,14 @@ tr:hover {
 
     .nav-links li a {
         font-size: 14px;
-        /* slightly smaller text */
     }
 
     .btn {
         padding: 8px 14px;
-        /* smaller button */
         font-size: 14px;
     }
 }
 
-/* 📱 Very small screens (like mobile <480px) */
 @media (max-width: 480px) {
     nav {
         padding: 8px 15px;
