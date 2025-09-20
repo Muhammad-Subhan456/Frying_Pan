@@ -1,0 +1,453 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: radial-gradient(50% 50% at 50% 50%, #66166B 0%, #af87f0 100%);
+    margin: 0;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Comic Sans MS, cursive, sans-serif;
+}
+
+.slider {
+    border-radius: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+}
+.slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 60px;
+    opacity: 0;
+    animation: fade 12s infinite;
+}
+.slide:nth-child(1) {
+    background: linear-gradient(135deg, #7b2ff7, #f107a3);
+    color: white;
+    animation-delay: 0s;
+}
+.slide:nth-child(2) {
+    background: linear-gradient(135deg, #fceabb, #f8b500);
+    color: #c0392b;
+    animation-delay: 4s;
+}
+.slide:nth-child(3) {
+    background: linear-gradient(135deg, #43cea2, #185a9d);
+    color: #fff;
+    animation-delay: 8s;
+}
+.content {
+    flex: 1;
+    max-width: 40%;
+    text-align: left;
+    font-size: 1.2rem;
+}
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.main-img {
+    flex: 1;
+    max-width: 40%;
+    max-height: 600px;
+    object-fit:fill;
+    /* keeps ratio */
+    transition: transform 0.8s ease-in-out;
+}
+.slide:hover .main-img {
+    transform: scale(1.05);
+}
+
+.qr-container {
+    display: flex;
+    justify-content: center;
+    /* center horizontally */
+    align-items: center;
+    /* align vertically */
+    gap: 40px;
+    /* space between text and QR */
+    margin: 50px auto;
+    flex-wrap: wrap;
+    /* makes it responsive */
+    text-align: left;
+}
+.multiplayer {
+    max-width: 300px;
+    color: white;
+}
+.multiplayer h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+.multiplayer p {
+    margin-bottom: 15px;
+}
+.qr-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.qr-section img {
+    width: 200px;
+    border-radius: 10px;
+}
+.qr-text {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ffd94a;
+}
+.play-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    /* space between image and text */
+    margin: 60px auto;
+    max-width: 1000px;
+    flex-wrap: wrap;
+    /* ensures wrapping on smaller screens */
+    text-align: left;
+}
+
+.play-image img {
+    width: 500px;
+    max-height: 1000px;
+    transform: scale(1.2);
+    /* lighter zoom */
+}
+
+/* text section */
+.play-text {
+    max-width: 400px;
+    color: white;
+}
+
+.play-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.play-text p {
+    font-size: 1.1rem;
+}
+
+
+.games-title {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    /* responsive size */
+    margin: 40px 0 20px;
+    font-weight: bold;
+    text-align: center;
+    color: wheat;
+}
+
+/* Grid layout adapts automatically */
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.card {
+    background: #f4f7d7;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    /* total card height */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* image always takes 60% */
+.card img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+}
+
+/* text always takes 40% */
+.card-text {
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-weight: bold;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    /* responsive text */
+    color: #333;
+    background: #fff;
+    text-align: center;
+}
+
+/* hover for desktop */
+.card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Accessibility: focus styles for keyboard navigation */
+.card:focus-within {
+    outline: 3px solid #ff9800;
+    outline-offset: 4px;
+}
+  
+.ccard {
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center;    /* center vertically */
+    min-height: 20vh;      /* take full screen height */
+    margin-bottom: 40px;
+}
+
+.ccard video {
+    max-width: 100%;
+    border-radius: 12px;   /* optional rounded corners */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* subtle shadow */
+}
+
+
+table {
+    width: 70%;
+    border-collapse: collapse;
+    margin: 30px auto;
+    font-family: Comic Sans MS, cursive, sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+    border: 2px solid #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+th {
+    background: linear-gradient(90deg, #d414f5, #ffcc70);
+    color: #fff;
+    font-size: 18px;
+}
+
+tr:nth-child(even) {
+    background-color: #ffeaa7;
+}
+
+tr:nth-child(odd) {
+    background-color: #fab1a0;
+}
+
+tr:hover {
+    background-color: #74b9ff;
+    color: #fff;
+}
+
+
+/* fade animation */
+@keyframes fade {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    8%,
+    33% {
+        opacity: 1;
+    }
+
+    42%,
+    100% {
+        opacity: 0;
+    }
+}
+/* Responsive */
+@media (max-width: 992px) {
+    .hero-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-image img {
+        width: 400px;
+        /* smaller on tablets */
+    }
+}
+@media (max-width: 576px) {
+    .hero-image img {
+        width: 280px;
+        /* mobile size */
+    }
+}
+/* Mobile adjustments */
+@media (max-width: 600px) {
+    .games-grid {
+        grid-template-columns: 1fr;
+        /* one column on small screens */
+    }
+    .games-title {
+        margin: 20px 0 10px;
+    }
+}
+@media print {
+    body {
+        font-size: 12pt;
+        color: black;
+        background: white;
+    }
+    nav,
+    footer,
+    .ads {
+        display: none;
+    }
+    a::after {
+        content: " (" attr(href) ")";
+    }
+}
+/* 📱 Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .play-section {
+        flex-direction: column;
+        /* stack image on top of text */
+        text-align: center;
+        /* center align text for mobile */
+        gap: 20px;
+    }
+
+    .play-image img {
+        width: 90%;
+        /* shrink image */
+        max-height: auto;
+        transform: scale(1);
+        /* remove zoom on mobile */
+    }
+
+    .play-text {
+        max-width: 90%;
+    }
+
+    .play-text h2 {
+        font-size: 2rem;
+    }
+
+    .play-text p {
+        font-size: 1rem;
+    }
+}
+/* 📱 Responsive navbar */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        /* stack logo, links, button vertically */
+        padding: 10px 20px;
+        border-radius: 15px;
+    }
+
+    .logo img {
+        height: 35px;
+        /* smaller logo */
+    }
+
+    .nav-links {
+        flex-direction: column;
+        /* stack links */
+        gap: 15px;
+        margin: 15px 0;
+        align-items: center;
+    }
+
+    .nav-links li a {
+        font-size: 14px;
+        /* slightly smaller text */
+    }
+
+    .btn {
+        padding: 8px 14px;
+        /* smaller button */
+        font-size: 14px;
+    }
+}
+
+/* 📱 Very small screens (like mobile <480px) */
+@media (max-width: 480px) {
+    nav {
+        padding: 8px 15px;
+    }
+
+    .logo img {
+        height: 30px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .btn {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+}
+@media (max-width: 1024px) {
+    .slide {
+        padding: 0 30px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content {
+        max-width: 80%;
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .main-img {
+        max-width: 70%;
+        max-height: 400px;
+    }
+}
+
+@media (max-width: 600px) {
+    .slide {
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .content {
+        max-width: 100%;
+        font-size: 0.9rem;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+    }
+
+    .main-img {
+        max-width: 90%;
+        max-height: 250px;
+    }
+}

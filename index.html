@@ -3,14 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-    <link rel="stylesheet" href="assets/css/footer.css">
-    <link rel="stylesheet" href="assets/css/navbar.css" >
-    <link rel="stylesheet" href="assets/css/dialog.css" >
+    <meta name="description" content="Play fun, safe, and educational online games for kids. Learn while having fun!">
+    <meta property="og:title" content="Fun Kids Games - Play & Learn">
+  <meta property="og:description" content="A safe space for kids to play fun, educational games online.">
+  <meta property="og:image" content="https://example.com/images/kids-game-preview.jpg">
+  <meta property="og:url" content="https://example.com/">
+  <meta property="og:type" content="website">
+    <title>Document</title>
+    <link rel="stylesheet", href="assets/css/home.css">
+    <link rel="stylesheet", href="assets/css/footer.css">
+    <link rel="stylesheet", href="assets/css/navbar.css">
+    <link rel="stylesheet", href="assets/css/dialog.css">
 </head>
 <body>
-     <!-- NavBar  -->
-    <div> 
+    
+<div> 
    <nav>
         <div class="logo">  
             <a href="index.html">
@@ -142,12 +149,141 @@
         });
     </script>
     </div>
+<br>
 
-    <!-- main  -->
-     
+<div class="slider" role="slider">
+  <div class="slide" id="cat-slide">
+    <div class="content">
+      <h1>Lily – The Explorer</h1>
+      <br>
+      <h3>"Curious mind, fearless heart!"</h3>
+      <br>
+      <p>"Meet Lily, the little spark of curiosity!<br>Always ready to dive into fun and discover new worlds with a big smile."</p>
+    </div>
+    <img src="assets/images/Lily.png" alt="Lily" class="main-img">
+  </div>
 
-    <!-- Footer  -->
-    <footer class="site-footer">
+  <div class="slide" id="lion-slide">
+    <div class="content">
+      <h1>Sher– The Loud Speaker</h1>
+      <br>
+      <h3>"Roar it out, the fun’s about!"</h3><br>
+      <p>he’s the loudest voice in the jungle! <br>His mighty roar shakes the ground, <br>
+        but it’s all in good fun. When Leo’s <br> 
+        around, you’ll never miss a call to play</p>
+    </div>
+    <img src="assets/images/lion.png" alt="Sher" class="main-img">
+  </div>
+
+  <div class="slide" id="dog-slide">
+    <div class="content">
+      <h1> Abdull - The surprise bag</h1>
+      <br><h3>Moody face, magic bag!</h3>
+      <p>"The Helper may look a little moody <br>, but don’t be fooled! He’s got a bag full of <br>surprises—sometimes silly, sometimes smart, and always fun. You never know what’s popping out next!"</p>
+    </div>
+    <img src="assets/images/Abdul.png" alt="Buddy" class="main-img">
+  </div>
+</div>
+
+
+  <!-- navigation -->
+  <div class="nav">
+    <label for="slide1" class="dot"></label>
+    <label for="slide2" class="dot"></label>
+    <label for="slide3" class="dot"></label>
+  </div>
+</div>
+<br>
+<!-- Play Now Button -->
+ <div id="qr" class="qr-container">
+  <!-- Left side: Text + Button -->
+  <div class="multiplayer">
+    <h3>Start <span style="color: yellow;"> Playing </span> Now</h3>
+    <p>Scan now for multiple players.</p>
+    <a href="#" class="btn">Play Now</a>
+  </div>
+
+  <!-- Right side: QR Code -->
+  <div class="qr-section">
+    <img src="assets/images/qr.png" alt="QR Code">
+    <div class="qr-text">Scan Me!</div>
+  </div>
+</div>
+
+
+  <!-- Play Section -->
+<div class="play-section">
+  <!-- Left: Image -->
+  <div class="play-image">
+    <img src="assets/images/7.png" alt="Console">
+  </div>
+
+  <!-- Right: Text -->
+  <div class="play-text">
+    <h2>Play games together</h2>
+    <p>Connect your phone and turn it into a controller!!</p>
+  </div>
+</div>
+<br>
+  <!-- Games Section -->
+  <div class="games-title" ><strong>Games</strong></div>
+  <div id="Game" class="games-grid">
+    <a href="https://www.smbgames.be/mario-2-the-lost-levels.php" target="_blank"><div class="card"><img src="assets/images/11.jpg" alt="Game"><div class="card-text">Treasure Quest</div></div></a>
+    <div class="card"><img src="assets/images/2.jfif" alt="Game" loading="lazy"><div class="card-text">Pokemon</div></div>
+    <div class="card"><img src="assets/images/3.jpg" alt="Game" loading="lazy"><div class="card-text">The Mafia</div></div>
+    <div class="card"><img src="assets/images/4.jfif" alt="Game" loading="lazy"><div class="card-text">Color Tunnel</div></div>
+    <div class="card"><img src="assets/images/5.jpg" alt="Game" loading="lazy"><div class="card-text">Mario</div></div>
+    <div class="card"><img src="assets/images/66.jpg" alt="Game" loading="lazy"><div class="card-text">Minecraft</div></div>
+    <div class="card"><img src="assets/images/7.jfif" alt="Game" loading="lazy"><div class="card-text">Adventure Quest</div></div>
+    <div class="card"><img src="assets/images/8.jfif" alt="Game" loading="lazy"><div class="card-text">Racing Challenge</div></div>
+ 
+  </div>
+
+<table role="table">
+    <tr>
+      <th>Game Name</th>
+      <th>Age Group</th>
+      <th>Type</th>
+    </tr>
+    <tr>
+      <td>🐰 Bunny Hop</td>
+      <td>5 - 8</td>
+      <td>Adventure</td>
+    </tr>
+    <tr>
+      <td>🧩 Puzzle Mania</td>
+      <td>6 - 10</td>
+      <td>Puzzle</td>
+    </tr>
+    <tr>
+      <td>🚗 Car Racer Kids</td>
+      <td>7 - 12</td>
+      <td>Racing</td>
+    </tr>
+    <tr>
+      <td>🍭 Candy Match</td>
+      <td>5 - 9</td>
+      <td>Match 3</td>
+    </tr>
+    <tr>
+      <td>🐉 Dragon Run</td>
+      <td>8 - 12</td>
+      <td>Action</td>
+    </tr>
+  </table>
+  <br>
+  <!-- Video -->
+    <div class="ccard">
+  <video autoplay loop muted width="600">
+    <source src="assets/images/intro1.mp4" type="video/mp4">
+    <track src="subtitles.vtt" kind="subtitles" srclang="en" label="English">
+  </video>
+</div>
+
+
+
+  <!-- Footer -->
+  <footer class="site-footer">
         <div class="footer-content">
             <div class="footer-left">
                 <p class="copyright">© 2025 Frying Pan - Where fun never stops!</p>
@@ -155,24 +291,27 @@
             <div class="footer-right">
                 <div class="quick-links">
                     <span class="links-title">Quick Links:</span>
-                    <a href="#" class="footer-link">Home</a>
+                    <a href="index.html" class="footer-link">Home</a>
                     <span class="divider">|</span>
                     <a href="#" class="footer-link">Games</a>
                     <span class="divider">|</span>
-                    <a href="#" class="footer-link">About Us</a>
+                    <a href="about.html" class="footer-link">About Us</a>
                     <span class="divider">|</span>
-                    <a href="#" class="footer-link">Contact</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                    <span class="divider">|</span>
+                    <a href="mailto:contact@kidsfun.com" class="footer-link">Email Us</a>
                 </div>
                 <div class="social-links">
                     <span class="social-title">Follow Us:</span>
-                    <a href="#" class="footer-link">Facebook</a>
+                    <a href="https://www.facebook.com/share/19iRc6h5pQ/" class="footer-link">Facebook</a>
                     <span class="divider">|</span>
-                    <a href="#" class="footer-link">Instagram</a>
+                    <a href="https://www.instagram.com/m.subhan_amir?igsh=MXFjaWNtMnY3Ym0yMA==" class="footer-link">Instagram</a>
                     <span class="divider">|</span>
-                    <a href="#" class="footer-link">YouTube</a>
+                    <a href="https://youtube.com/@pakagents2706?si=AopHycyJbFFblvmR" class="footer-link">YouTube</a>
                 </div>
             </div>
         </div>
     </footer>
+
 </body>
 </html>

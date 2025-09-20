@@ -1,4 +1,3 @@
-/* Dialog Styles */
 .signin-dialog {
     border: none;
     border-radius: 20px;
@@ -21,7 +20,7 @@
 }
 
 .dialog-content {
-    background-image: url('path-to-your-background-image.jpg'); /* Replace with your image path */
+    background-image: url('#'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
