@@ -3,25 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Footer Component</title>
+    <title>Home Page</title>
     <link rel="stylesheet" href="assets/css/footer.css">
-    <link rel="stylesheet" href="assets/css/temp.css" >
+    <link rel="stylesheet" href="assets/css/navbar.css" >
 </head>
 <body>
      <!-- NavBar  -->
-      <navbar class="navbar">
-        <div class="logo">
-            <img src="/assets/images/logo.png" alt="logo">
-        </div>
+          <nav>
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/images/logo.png" alt="FryingPan Logo" />
+        </a>
+      </div>
 
-        <div class="nav-links">
-            <a href="games.html">Games</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-            <a href="QRcode.html">QR-Code</a>
-        </div>
-        <button class="signin">SignIn/logIn</button>
-    </navbar>
+      <ul class="nav-links">
+        <strong> <li><a href="#">Games</a></li></strong>
+         <strong><li><a href="contact.html">Contact us</a></li></strong>
+        <strong><li><a href="about.html">About us</a></li></strong>
+       <strong> <li><a href="#">Scan QR</a></li></strong>
+      </ul>
+      <a href="#" class="btn">Sign in / Register</a>
+    </nav> 
 
     <!-- main  -->
      

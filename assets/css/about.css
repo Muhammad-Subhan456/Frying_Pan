@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #4A14A4 0%);
+    min-height: 100vh;
+    color: white;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Section */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.frame-number {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.main-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 30px;
+}
+
+/* About Section */
+.about-section {
+    background: linear-gradient(135deg, #FDE047 0%, #FACC15 100%);
+    border-radius: 30px;
+    padding: 40px;
+    margin-bottom: 30px;
+    color: #1F2937;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.about-text {
+    flex: 2;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.character-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.section-title {
+    color: #1E40AF;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.about-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #374151;
+}
+
+/* Mission Section */
+.mission-section {
+    background: linear-gradient(135deg, #C7B9E3 0%, #A855F7 100%);
+    border-radius: 30px;
+    padding: 40px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.mission-section .section-title {
+    color: #1E40AF;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.mission-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #1F2937;
+}
+
+/* Promise Section */
+.promise-section {
+    background: linear-gradient(135deg, #C7B9E3 0%, #A855F7 100%);
+    border-radius: 30px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.promise-section .section-title {
+    color: #1E40AF;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.promise-list {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.promise-list li {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #1F2937;
+    position: relative;
+    padding-left: 20px;
+}
+
+.promise-list li::before {
+    content: "•";
+    color: #1E40AF;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -5px;
+}
+
+.promise-list li strong {
+    color: #1E40AF;
+}
+
+.promise-footer {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #1F2937;
+    font-style: italic;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .main-title {
+        font-size: 2.2rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .about-text {
+        order: 2;
+    }
+    
+    .about-image {
+        order: 1;
+        margin-bottom: 20px;
+    }
+    
+    .character-img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .about-section,
+    .mission-section,
+    .promise-section {
+        padding: 30px 25px;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+    
+    .main-title {
+        font-size: 1.8rem;
+    }
+    
+    .subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .about-section,
+    .mission-section,
+    .promise-section {
+        padding: 25px 20px;
+        border-radius: 20px;
+    }
+    
+    .character-img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .section-title {
+        font-size: 1.3rem;
+    }
+    
+    .about-description,
+    .mission-text,
+    .promise-list li,
+    .promise-footer {
+        font-size: 0.9rem;
+    }
+}
