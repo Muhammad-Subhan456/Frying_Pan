@@ -5,14 +5,11 @@
 }
 
 body {
-  background-image: url("/assets/images/contact.jpg");
+  background-image: url("assets/images/contact.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
 }
-
-
 
 /* Contact Section */
 .contact {
