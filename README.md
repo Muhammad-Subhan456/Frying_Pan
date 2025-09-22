@@ -75,6 +75,7 @@ The website is hosted with **GitHub Pages**.
 ---
 
 ## 📂 Project Structure
+```
 Frying_Pan/
 │── index.html              # Homepage
 │── about.html              # About page
@@ -94,7 +95,7 @@ Frying_Pan/
 │       └── brochure.pdf    # Downloadable brochure
 │
 └── README.md               # Documentation
-
+```
 
 ![LightHouse Before](assets/images/before.png)
 ![LightHouse After](assets/images/after.png)
