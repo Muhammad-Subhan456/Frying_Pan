@@ -77,23 +77,23 @@ The website is hosted with **GitHub Pages**.
 ## 📂 Project Structure
 ```
 Frying_Pan/
-│── index.html              # Homepage
-│── about.html              # About page
-│── contact.html            # Contact page
+├── .git/                   # Git version control folder
 │
 ├── assets/
 │   ├── css/
-│   │   └── styles.css      # Main stylesheet
+│   │   ├── about.css       # Styles for About page
+│   │   ├── contact.css     # Styles for Contact page
+│   │   ├── dialog.css      # Styles for dialogs/modals
+│   │   ├── footer.css      # Styles for footer
+│   │   ├── home.css        # Styles for Homepage
+│   │   └── navbar.css      # Styles for navigation bar
 │   │
-│   ├── images/
-│   │   ├── preview.png     # Screenshot used in README
-│   │   └── (other images)  # Website images
-│   │
-│   └── media/
-│       ├── video.mp4       # Example video
-│       ├── audio.mp3       # Example audio
-│       └── brochure.pdf    # Downloadable brochure
+│   ├── images/             # Website images
+│   └── media/              # Videos, audio, brochures etc.
 │
+├── about.html              # About page
+├── contact.html            # Contact page
+├── index.html              # Homepage
 └── README.md               # Documentation
 ```
 
